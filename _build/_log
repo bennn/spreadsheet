@@ -1,0 +1,14 @@
+### Starting build.
+# Target: spreadsheet.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:spreadsheet.ml, ocaml, ocamldep, quiet, traverse }
+/home/ben/.opam/4.02.1/bin/ocamlfind ocamldep -modules spreadsheet.ml > spreadsheet.ml.depends
+# Target: spreadsheet.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:spreadsheet.cmo, file:spreadsheet.ml, implem, ocaml, quiet, traverse }
+/home/ben/.opam/4.02.1/bin/ocamlfind ocamlc -c -g -annot -bin-annot -o spreadsheet.cmo spreadsheet.ml
+# Target: spreadsheet.cma, tags: { annot, bin_annot, byte, debug, extension:cma, file:spreadsheet.cma, library, link, ocaml, quiet, traverse }
+/home/ben/.opam/4.02.1/bin/ocamlfind ocamlc -a spreadsheet.cmo -o spreadsheet.cma
+# Target: spreadsheet.cmx, tags: { annot, bin_annot, compile, debug, extension:cmx, extension:ml, file:spreadsheet.cmx, file:spreadsheet.ml, implem, native, ocaml, quiet, traverse }
+/home/ben/.opam/4.02.1/bin/ocamlfind ocamlopt -c -g -annot -bin-annot -o spreadsheet.cmx spreadsheet.ml
+# Target: spreadsheet.cmxa, tags: { annot, bin_annot, debug, extension:cmxa, file:spreadsheet.cmxa, library, link, native, ocaml, quiet, traverse }
+/home/ben/.opam/4.02.1/bin/ocamlfind ocamlopt -a spreadsheet.cmx -o spreadsheet.cmxa
+# Target: spreadsheet.cmxs, tags: { annot, bin_annot, debug, extension:cmxs, file:spreadsheet.cmxs, library, link, native, ocaml, quiet, shared, traverse, use_spreadsheet }
+/home/ben/.opam/4.02.1/bin/ocamlfind ocamlopt -shared spreadsheet.cmxa spreadsheet.cmx -o spreadsheet.cmxs
+# Compilation successful.

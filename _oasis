@@ -1,0 +1,13 @@
+OASISFormat: 0.4
+Name:        spreadsheet
+Version:     0.1
+Synopsis:    Functor for parsing and building spreadsheets
+Authors:     Ben Greenman
+License:     LGPL
+Plugins:     META (0.4), DevFiles (0.4)
+
+Library spreadsheet
+  Path:       .
+  BuildTools: ocamlbuild
+  Modules:    Spreadsheet
+  

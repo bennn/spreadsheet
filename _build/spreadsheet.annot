@@ -1,0 +1,948 @@
+"spreadsheet.ml" 17 329 339 "spreadsheet.ml" 17 329 346
+type(
+  Spec.row -> Spec.row -> int
+)
+ident(
+  def compare "spreadsheet.ml" 17 329 372 "spreadsheet.ml" 18 373 380
+)
+"spreadsheet.ml" 17 329 356 "spreadsheet.ml" 17 329 372
+type(
+  Spec.row -> Spec.row -> int
+)
+ident(
+  int_ref Spec.compare_row "spreadsheet.ml" 6 80 82 "spreadsheet.ml" 6 80 117
+)
+"spreadsheet.ml" 15 269 289 "spreadsheet.ml" 18 373 381
+call(
+  stack
+)
+"spreadsheet.ml" 22 406 414 "spreadsheet.ml" 22 406 421
+type(
+  t -> row:RowSet.elt -> RowSet.t
+)
+ident(
+  def add_row "spreadsheet.ml" 29 595 599 "spreadsheet.ml" 72 1819 1824
+)
+"spreadsheet.ml" 22 406 423 "spreadsheet.ml" 22 406 428
+type(
+  t
+)
+ident(
+  def sheet "spreadsheet.ml" 22 406 434 "spreadsheet.ml" 27 565 593
+)
+"spreadsheet.ml" 22 406 435 "spreadsheet.ml" 22 406 438
+type(
+  RowSet.elt
+)
+ident(
+  def row "spreadsheet.ml" 23 441 447 "spreadsheet.ml" 27 565 593
+)
+"spreadsheet.ml" 23 441 450 "spreadsheet.ml" 23 441 460
+type(
+  RowSet.elt -> t -> bool
+)
+ident(
+  ext_ref RowSet.mem
+)
+"spreadsheet.ml" 23 441 461 "spreadsheet.ml" 23 441 464
+type(
+  RowSet.elt
+)
+ident(
+  int_ref row "spreadsheet.ml" 22 406 435 "spreadsheet.ml" 22 406 438
+)
+"spreadsheet.ml" 23 441 465 "spreadsheet.ml" 23 441 470
+type(
+  t
+)
+ident(
+  int_ref sheet "spreadsheet.ml" 22 406 423 "spreadsheet.ml" 22 406 428
+)
+"spreadsheet.ml" 23 441 450 "spreadsheet.ml" 23 441 470
+call(
+  stack
+)
+type(
+  bool
+)
+"spreadsheet.ml" 24 476 488 "spreadsheet.ml" 24 476 494
+type(
+  RowSet.t
+)
+ident(
+  def sheet' "spreadsheet.ml" 25 524 532 "spreadsheet.ml" 25 524 553
+)
+"spreadsheet.ml" 24 476 497 "spreadsheet.ml" 24 476 510
+type(
+  RowSet.elt -> t -> RowSet.t
+)
+ident(
+  ext_ref RowSet.remove
+)
+"spreadsheet.ml" 24 476 511 "spreadsheet.ml" 24 476 514
+type(
+  RowSet.elt
+)
+ident(
+  int_ref row "spreadsheet.ml" 22 406 435 "spreadsheet.ml" 22 406 438
+)
+"spreadsheet.ml" 24 476 515 "spreadsheet.ml" 24 476 520
+type(
+  t
+)
+ident(
+  int_ref sheet "spreadsheet.ml" 22 406 423 "spreadsheet.ml" 22 406 428
+)
+"spreadsheet.ml" 24 476 497 "spreadsheet.ml" 24 476 520
+call(
+  stack
+)
+type(
+  RowSet.t
+)
+"spreadsheet.ml" 25 524 532 "spreadsheet.ml" 25 524 542
+type(
+  RowSet.elt -> RowSet.t -> RowSet.t
+)
+ident(
+  ext_ref RowSet.add
+)
+"spreadsheet.ml" 25 524 543 "spreadsheet.ml" 25 524 546
+type(
+  RowSet.elt
+)
+ident(
+  int_ref row "spreadsheet.ml" 22 406 435 "spreadsheet.ml" 22 406 438
+)
+"spreadsheet.ml" 25 524 547 "spreadsheet.ml" 25 524 553
+type(
+  RowSet.t
+)
+ident(
+  int_ref sheet' "spreadsheet.ml" 24 476 488 "spreadsheet.ml" 24 476 494
+)
+"spreadsheet.ml" 25 524 532 "spreadsheet.ml" 25 524 553
+call(
+  tail
+)
+type(
+  RowSet.t
+)
+"spreadsheet.ml" 24 476 484 "spreadsheet.ml" 25 524 553
+type(
+  RowSet.t
+)
+"spreadsheet.ml" 27 565 573 "spreadsheet.ml" 27 565 583
+type(
+  RowSet.elt -> t -> RowSet.t
+)
+ident(
+  ext_ref RowSet.add
+)
+"spreadsheet.ml" 27 565 584 "spreadsheet.ml" 27 565 587
+type(
+  RowSet.elt
+)
+ident(
+  int_ref row "spreadsheet.ml" 22 406 435 "spreadsheet.ml" 22 406 438
+)
+"spreadsheet.ml" 27 565 588 "spreadsheet.ml" 27 565 593
+type(
+  t
+)
+ident(
+  int_ref sheet "spreadsheet.ml" 22 406 423 "spreadsheet.ml" 22 406 428
+)
+"spreadsheet.ml" 27 565 573 "spreadsheet.ml" 27 565 593
+call(
+  tail
+)
+type(
+  RowSet.t
+)
+"spreadsheet.ml" 23 441 447 "spreadsheet.ml" 27 565 593
+type(
+  RowSet.t
+)
+"spreadsheet.ml" 29 595 603 "spreadsheet.ml" 29 595 613
+type(
+  t -> int
+)
+ident(
+  def count_rows "spreadsheet.ml" 32 663 667 "spreadsheet.ml" 72 1819 1824
+)
+"spreadsheet.ml" 29 595 615 "spreadsheet.ml" 29 595 620
+type(
+  t
+)
+ident(
+  def sheet "spreadsheet.ml" 29 595 626 "spreadsheet.ml" 30 634 661
+)
+"spreadsheet.ml" 30 634 640 "spreadsheet.ml" 30 634 655
+type(
+  t -> int
+)
+ident(
+  ext_ref RowSet.cardinal
+)
+"spreadsheet.ml" 30 634 656 "spreadsheet.ml" 30 634 661
+type(
+  t
+)
+ident(
+  int_ref sheet "spreadsheet.ml" 29 595 615 "spreadsheet.ml" 29 595 620
+)
+"spreadsheet.ml" 30 634 640 "spreadsheet.ml" 30 634 661
+call(
+  tail
+)
+type(
+  int
+)
+type(
+  int
+)
+"spreadsheet.ml" 32 663 671 "spreadsheet.ml" 32 663 677
+type(
+  unit -> RowSet.t
+)
+ident(
+  def create "spreadsheet.ml" 35 703 707 "spreadsheet.ml" 72 1819 1824
+)
+"spreadsheet.ml" 32 663 678 "spreadsheet.ml" 32 663 680
+type(
+  unit
+)
+"spreadsheet.ml" 33 683 689 "spreadsheet.ml" 33 683 701
+type(
+  RowSet.t
+)
+ident(
+  ext_ref RowSet.empty
+)
+"spreadsheet.ml" 35 703 711 "spreadsheet.ml" 35 703 721
+type(
+  string -> string list
+)
+ident(
+  def read_lines "spreadsheet.ml" 46 1019 1023 "spreadsheet.ml" 72 1819 1824
+)
+"spreadsheet.ml" 35 703 722 "spreadsheet.ml" 35 703 726
+type(
+  string
+)
+ident(
+  def name "spreadsheet.ml" 35 703 727 "spreadsheet.ml" 44 1004 1017
+)
+"spreadsheet.ml" 36 743 753 "spreadsheet.ml" 36 743 755
+type(
+  in_channel
+)
+ident(
+  def ic "spreadsheet.ml" 37 774 780 "spreadsheet.ml" 44 1004 1017
+)
+"spreadsheet.ml" 36 743 758 "spreadsheet.ml" 36 743 765
+type(
+  string -> in_channel
+)
+ident(
+  ext_ref Pervasives.open_in
+)
+"spreadsheet.ml" 36 743 766 "spreadsheet.ml" 36 743 770
+type(
+  string
+)
+ident(
+  int_ref name "spreadsheet.ml" 35 703 722 "spreadsheet.ml" 35 703 726
+)
+"spreadsheet.ml" 36 743 758 "spreadsheet.ml" 36 743 770
+call(
+  stack
+)
+type(
+  in_channel
+)
+"spreadsheet.ml" 37 774 784 "spreadsheet.ml" 37 774 792
+type(
+  unit -> string option
+)
+ident(
+  def try_read "spreadsheet.ml" 39 859 865 "spreadsheet.ml" 44 1004 1017
+)
+"spreadsheet.ml" 37 774 793 "spreadsheet.ml" 37 774 795
+type(
+  unit
+)
+"spreadsheet.ml" 38 798 816 "spreadsheet.ml" 38 798 826
+type(
+  in_channel -> string
+)
+ident(
+  ext_ref Pervasives.input_line
+)
+"spreadsheet.ml" 38 798 827 "spreadsheet.ml" 38 798 829
+type(
+  in_channel
+)
+ident(
+  int_ref ic "spreadsheet.ml" 36 743 753 "spreadsheet.ml" 36 743 755
+)
+"spreadsheet.ml" 38 798 815 "spreadsheet.ml" 38 798 830
+call(
+  stack
+)
+type(
+  string
+)
+"spreadsheet.ml" 38 798 810 "spreadsheet.ml" 38 798 830
+type(
+  string option
+)
+"spreadsheet.ml" 38 798 836 "spreadsheet.ml" 38 798 847
+type(
+  exn
+)
+"spreadsheet.ml" 38 798 851 "spreadsheet.ml" 38 798 855
+type(
+  string option
+)
+"spreadsheet.ml" 38 798 806 "spreadsheet.ml" 38 798 855
+type(
+  string option
+)
+"spreadsheet.ml" 39 859 873 "spreadsheet.ml" 39 859 877
+type(
+  string list -> string list
+)
+ident(
+  def loop "spreadsheet.ml" 39 859 865 "spreadsheet.ml" 44 1004 1017
+)
+"spreadsheet.ml" 39 859 878 "spreadsheet.ml" 39 859 881
+type(
+  string list
+)
+ident(
+  def acc "spreadsheet.ml" 40 884 892 "spreadsheet.ml" 42 951 994
+)
+"spreadsheet.ml" 40 884 898 "spreadsheet.ml" 40 884 906
+type(
+  unit -> string option
+)
+ident(
+  int_ref try_read "spreadsheet.ml" 37 774 784 "spreadsheet.ml" 37 774 792
+)
+"spreadsheet.ml" 40 884 907 "spreadsheet.ml" 40 884 909
+type(
+  unit
+)
+"spreadsheet.ml" 40 884 898 "spreadsheet.ml" 40 884 909
+call(
+  stack
+)
+type(
+  string option
+)
+"spreadsheet.ml" 41 915 930 "spreadsheet.ml" 41 915 931
+type(
+  string
+)
+ident(
+  def s "spreadsheet.ml" 41 915 935 "spreadsheet.ml" 41 915 950
+)
+"spreadsheet.ml" 41 915 925 "spreadsheet.ml" 41 915 931
+type(
+  string option
+)
+"spreadsheet.ml" 41 915 935 "spreadsheet.ml" 41 915 939
+type(
+  string list -> string list
+)
+ident(
+  int_ref loop "spreadsheet.ml" 39 859 873 "spreadsheet.ml" 39 859 877
+)
+"spreadsheet.ml" 41 915 941 "spreadsheet.ml" 41 915 942
+type(
+  string
+)
+ident(
+  int_ref s "spreadsheet.ml" 41 915 930 "spreadsheet.ml" 41 915 931
+)
+"spreadsheet.ml" 41 915 946 "spreadsheet.ml" 41 915 949
+type(
+  string list
+)
+ident(
+  int_ref acc "spreadsheet.ml" 39 859 878 "spreadsheet.ml" 39 859 881
+)
+"spreadsheet.ml" 41 915 940 "spreadsheet.ml" 41 915 950
+type(
+  string list
+)
+"spreadsheet.ml" 41 915 935 "spreadsheet.ml" 41 915 950
+call(
+  tail
+)
+type(
+  string list
+)
+"spreadsheet.ml" 42 951 961 "spreadsheet.ml" 42 951 965
+type(
+  string option
+)
+"spreadsheet.ml" 42 951 969 "spreadsheet.ml" 42 951 977
+type(
+  in_channel -> unit
+)
+ident(
+  ext_ref Pervasives.close_in
+)
+"spreadsheet.ml" 42 951 978 "spreadsheet.ml" 42 951 980
+type(
+  in_channel
+)
+ident(
+  int_ref ic "spreadsheet.ml" 36 743 753 "spreadsheet.ml" 36 743 755
+)
+"spreadsheet.ml" 42 951 969 "spreadsheet.ml" 42 951 980
+call(
+  stack
+)
+type(
+  unit
+)
+"spreadsheet.ml" 42 951 982 "spreadsheet.ml" 42 951 990
+type(
+  string list -> string list
+)
+ident(
+  ext_ref List.rev
+)
+"spreadsheet.ml" 42 951 991 "spreadsheet.ml" 42 951 994
+type(
+  string list
+)
+ident(
+  int_ref acc "spreadsheet.ml" 39 859 878 "spreadsheet.ml" 39 859 881
+)
+"spreadsheet.ml" 42 951 982 "spreadsheet.ml" 42 951 994
+call(
+  tail
+)
+type(
+  string list
+)
+"spreadsheet.ml" 42 951 969 "spreadsheet.ml" 42 951 994
+type(
+  string list
+)
+"spreadsheet.ml" 40 884 892 "spreadsheet.ml" 42 951 994
+type(
+  string list
+)
+"spreadsheet.ml" 44 1004 1010 "spreadsheet.ml" 44 1004 1014
+type(
+  string list -> string list
+)
+ident(
+  int_ref loop "spreadsheet.ml" 39 859 873 "spreadsheet.ml" 39 859 877
+)
+"spreadsheet.ml" 44 1004 1015 "spreadsheet.ml" 44 1004 1017
+type(
+  string list
+)
+"spreadsheet.ml" 44 1004 1010 "spreadsheet.ml" 44 1004 1017
+call(
+  tail
+)
+type(
+  string list
+)
+"spreadsheet.ml" 39 859 865 "spreadsheet.ml" 44 1004 1017
+type(
+  string list
+)
+"spreadsheet.ml" 37 774 780 "spreadsheet.ml" 44 1004 1017
+type(
+  string list
+)
+"spreadsheet.ml" 36 743 749 "spreadsheet.ml" 44 1004 1017
+type(
+  string list
+)
+type(
+  string list
+)
+"spreadsheet.ml" 46 1019 1027 "spreadsheet.ml" 46 1019 1031
+type(
+  string -> t
+)
+ident(
+  def read "spreadsheet.ml" 54 1216 1220 "spreadsheet.ml" 72 1819 1824
+)
+"spreadsheet.ml" 46 1019 1033 "spreadsheet.ml" 46 1019 1038
+type(
+  string
+)
+ident(
+  def fname "spreadsheet.ml" 46 1019 1049 "spreadsheet.ml" 52 1188 1214
+)
+"spreadsheet.ml" 47 1055 1065 "spreadsheet.ml" 47 1055 1070
+type(
+  Spec.row list
+)
+ident(
+  def lines "spreadsheet.ml" 52 1188 1194 "spreadsheet.ml" 52 1188 1214
+)
+"spreadsheet.ml" 48 1094 1102 "spreadsheet.ml" 48 1094 1110
+type(
+  (string -> Spec.row) -> string list -> Spec.row list
+)
+ident(
+  ext_ref List.map
+)
+"spreadsheet.ml" 49 1111 1121 "spreadsheet.ml" 49 1111 1139
+type(
+  string -> Spec.row
+)
+ident(
+  int_ref Spec.row_of_string "spreadsheet.ml" 7 118 120 "spreadsheet.ml" 7 118 153
+)
+"spreadsheet.ml" 50 1140 1151 "spreadsheet.ml" 50 1140 1158
+type(
+  string list -> string list
+)
+ident(
+  ext_ref List.tl
+)
+"spreadsheet.ml" 50 1140 1160 "spreadsheet.ml" 50 1140 1170
+type(
+  string -> string list
+)
+ident(
+  int_ref read_lines "spreadsheet.ml" 35 703 711 "spreadsheet.ml" 35 703 721
+)
+"spreadsheet.ml" 50 1140 1171 "spreadsheet.ml" 50 1140 1176
+type(
+  string
+)
+ident(
+  int_ref fname "spreadsheet.ml" 46 1019 1033 "spreadsheet.ml" 46 1019 1038
+)
+"spreadsheet.ml" 50 1140 1159 "spreadsheet.ml" 50 1140 1177
+call(
+  stack
+)
+type(
+  string list
+)
+"spreadsheet.ml" 50 1140 1150 "spreadsheet.ml" 50 1140 1178
+call(
+  stack
+)
+type(
+  string list
+)
+"spreadsheet.ml" 48 1094 1102 "spreadsheet.ml" 50 1140 1178
+call(
+  stack
+)
+type(
+  Spec.row list
+)
+"spreadsheet.ml" 52 1188 1194 "spreadsheet.ml" 52 1188 1208
+type(
+  RowSet.elt list -> t
+)
+ident(
+  ext_ref RowSet.of_list
+)
+"spreadsheet.ml" 52 1188 1209 "spreadsheet.ml" 52 1188 1214
+type(
+  RowSet.elt list
+)
+ident(
+  int_ref lines "spreadsheet.ml" 47 1055 1065 "spreadsheet.ml" 47 1055 1070
+)
+"spreadsheet.ml" 52 1188 1194 "spreadsheet.ml" 52 1188 1214
+call(
+  tail
+)
+type(
+  t
+)
+"spreadsheet.ml" 47 1055 1061 "spreadsheet.ml" 52 1188 1214
+type(
+  t
+)
+type(
+  t
+)
+"spreadsheet.ml" 54 1216 1224 "spreadsheet.ml" 54 1216 1235
+type(
+  string -> string list -> unit
+)
+ident(
+  def write_lines "spreadsheet.ml" 61 1439 1443 "spreadsheet.ml" 72 1819 1824
+)
+"spreadsheet.ml" 54 1216 1236 "spreadsheet.ml" 54 1216 1241
+type(
+  string
+)
+ident(
+  def fname "spreadsheet.ml" 54 1216 1242 "spreadsheet.ml" 59 1429 1437
+)
+"spreadsheet.ml" 54 1216 1242 "spreadsheet.ml" 54 1216 1247
+type(
+  string list
+)
+ident(
+  def lines "spreadsheet.ml" 55 1250 1256 "spreadsheet.ml" 59 1429 1437
+)
+"spreadsheet.ml" 55 1250 1260 "spreadsheet.ml" 55 1250 1267
+type(
+  out_channel
+)
+ident(
+  def out_chn "spreadsheet.ml" 56 1288 1294 "spreadsheet.ml" 59 1429 1437
+)
+"spreadsheet.ml" 55 1250 1270 "spreadsheet.ml" 55 1250 1278
+type(
+  string -> out_channel
+)
+ident(
+  ext_ref Pervasives.open_out
+)
+"spreadsheet.ml" 55 1250 1279 "spreadsheet.ml" 55 1250 1284
+type(
+  string
+)
+ident(
+  int_ref fname "spreadsheet.ml" 54 1216 1236 "spreadsheet.ml" 54 1216 1241
+)
+"spreadsheet.ml" 55 1250 1270 "spreadsheet.ml" 55 1250 1284
+call(
+  stack
+)
+type(
+  out_channel
+)
+"spreadsheet.ml" 56 1288 1298 "spreadsheet.ml" 56 1288 1300
+type(
+  unit
+)
+"spreadsheet.ml" 57 1303 1311 "spreadsheet.ml" 57 1303 1320
+type(
+  (string -> unit) -> string list -> unit
+)
+ident(
+  ext_ref List.iter
+)
+"spreadsheet.ml" 57 1303 1326 "spreadsheet.ml" 57 1303 1327
+type(
+  string
+)
+ident(
+  def l "spreadsheet.ml" 57 1303 1331 "spreadsheet.ml" 57 1303 1382
+)
+"spreadsheet.ml" 57 1303 1331 "spreadsheet.ml" 57 1303 1344
+type(
+  out_channel -> string -> unit
+)
+ident(
+  ext_ref Pervasives.output_string
+)
+"spreadsheet.ml" 57 1303 1345 "spreadsheet.ml" 57 1303 1352
+type(
+  out_channel
+)
+ident(
+  int_ref out_chn "spreadsheet.ml" 55 1250 1260 "spreadsheet.ml" 55 1250 1267
+)
+"spreadsheet.ml" 57 1303 1353 "spreadsheet.ml" 57 1303 1354
+type(
+  string
+)
+ident(
+  int_ref l "spreadsheet.ml" 57 1303 1326 "spreadsheet.ml" 57 1303 1327
+)
+"spreadsheet.ml" 57 1303 1331 "spreadsheet.ml" 57 1303 1354
+call(
+  stack
+)
+type(
+  unit
+)
+"spreadsheet.ml" 57 1303 1356 "spreadsheet.ml" 57 1303 1369
+type(
+  out_channel -> string -> unit
+)
+ident(
+  ext_ref Pervasives.output_string
+)
+"spreadsheet.ml" 57 1303 1370 "spreadsheet.ml" 57 1303 1377
+type(
+  out_channel
+)
+ident(
+  int_ref out_chn "spreadsheet.ml" 55 1250 1260 "spreadsheet.ml" 55 1250 1267
+)
+"spreadsheet.ml" 57 1303 1378 "spreadsheet.ml" 57 1303 1382
+type(
+  string
+)
+"spreadsheet.ml" 57 1303 1356 "spreadsheet.ml" 57 1303 1382
+call(
+  tail
+)
+type(
+  unit
+)
+"spreadsheet.ml" 57 1303 1331 "spreadsheet.ml" 57 1303 1382
+type(
+  unit
+)
+"spreadsheet.ml" 57 1303 1321 "spreadsheet.ml" 57 1303 1383
+type(
+  string -> unit
+)
+"spreadsheet.ml" 57 1303 1384 "spreadsheet.ml" 57 1303 1389
+type(
+  string list
+)
+ident(
+  int_ref lines "spreadsheet.ml" 54 1216 1242 "spreadsheet.ml" 54 1216 1247
+)
+"spreadsheet.ml" 57 1303 1311 "spreadsheet.ml" 57 1303 1389
+call(
+  stack
+)
+type(
+  unit
+)
+"spreadsheet.ml" 58 1393 1403 "spreadsheet.ml" 58 1393 1405
+type(
+  unit
+)
+"spreadsheet.ml" 58 1393 1408 "spreadsheet.ml" 58 1393 1417
+type(
+  out_channel -> unit
+)
+ident(
+  ext_ref Pervasives.close_out
+)
+"spreadsheet.ml" 58 1393 1418 "spreadsheet.ml" 58 1393 1425
+type(
+  out_channel
+)
+ident(
+  int_ref out_chn "spreadsheet.ml" 55 1250 1260 "spreadsheet.ml" 55 1250 1267
+)
+"spreadsheet.ml" 58 1393 1408 "spreadsheet.ml" 58 1393 1425
+call(
+  stack
+)
+type(
+  unit
+)
+"spreadsheet.ml" 59 1429 1435 "spreadsheet.ml" 59 1429 1437
+type(
+  unit
+)
+"spreadsheet.ml" 58 1393 1399 "spreadsheet.ml" 59 1429 1437
+type(
+  unit
+)
+"spreadsheet.ml" 56 1288 1294 "spreadsheet.ml" 59 1429 1437
+type(
+  unit
+)
+"spreadsheet.ml" 55 1250 1256 "spreadsheet.ml" 59 1429 1437
+type(
+  unit
+)
+"spreadsheet.ml" 61 1439 1447 "spreadsheet.ml" 61 1439 1452
+type(
+  filename:string -> t -> unit
+)
+ident(
+  def write "spreadsheet.ml" 70 1788 1817 "spreadsheet.ml" 72 1819 1824
+)
+"spreadsheet.ml" 61 1439 1454 "spreadsheet.ml" 61 1439 1462
+type(
+  string
+)
+ident(
+  def filename "spreadsheet.ml" 61 1439 1463 "spreadsheet.ml" 70 1788 1817
+)
+"spreadsheet.ml" 61 1439 1464 "spreadsheet.ml" 61 1439 1469
+type(
+  t
+)
+ident(
+  def sheet "spreadsheet.ml" 61 1439 1475 "spreadsheet.ml" 70 1788 1817
+)
+"spreadsheet.ml" 62 1484 1494 "spreadsheet.ml" 62 1484 1498
+type(
+  string list
+)
+ident(
+  def rows "spreadsheet.ml" 67 1590 1596 "spreadsheet.ml" 70 1788 1817
+)
+"spreadsheet.ml" 63 1501 1509 "spreadsheet.ml" 63 1501 1517
+type(
+  (RowSet.elt -> string) -> RowSet.elt list -> string list
+)
+ident(
+  ext_ref List.map
+)
+"spreadsheet.ml" 64 1518 1528 "spreadsheet.ml" 64 1518 1546
+type(
+  RowSet.elt -> string
+)
+ident(
+  int_ref Spec.string_of_row "spreadsheet.ml" 8 154 156 "spreadsheet.ml" 8 154 189
+)
+"spreadsheet.ml" 65 1547 1558 "spreadsheet.ml" 65 1547 1573
+type(
+  t -> RowSet.elt list
+)
+ident(
+  ext_ref RowSet.elements
+)
+"spreadsheet.ml" 65 1547 1574 "spreadsheet.ml" 65 1547 1579
+type(
+  t
+)
+ident(
+  int_ref sheet "spreadsheet.ml" 61 1439 1464 "spreadsheet.ml" 61 1439 1469
+)
+"spreadsheet.ml" 65 1547 1557 "spreadsheet.ml" 65 1547 1580
+call(
+  stack
+)
+type(
+  RowSet.elt list
+)
+"spreadsheet.ml" 63 1501 1509 "spreadsheet.ml" 65 1547 1580
+call(
+  stack
+)
+type(
+  string list
+)
+"spreadsheet.ml" 67 1590 1600 "spreadsheet.ml" 67 1590 1611
+type(
+  string -> string list -> unit
+)
+ident(
+  int_ref write_lines "spreadsheet.ml" 54 1216 1224 "spreadsheet.ml" 54 1216 1235
+)
+"spreadsheet.ml" 67 1590 1612 "spreadsheet.ml" 67 1590 1620
+type(
+  string
+)
+ident(
+  int_ref filename "spreadsheet.ml" 61 1439 1454 "spreadsheet.ml" 61 1439 1462
+)
+"spreadsheet.ml" 67 1590 1622 "spreadsheet.ml" 67 1590 1632
+type(
+  string
+)
+ident(
+  int_ref Spec.title "spreadsheet.ml" 9 190 192 "spreadsheet.ml" 9 190 210
+)
+"spreadsheet.ml" 67 1590 1636 "spreadsheet.ml" 67 1590 1640
+type(
+  string list
+)
+ident(
+  int_ref rows "spreadsheet.ml" 62 1484 1494 "spreadsheet.ml" 62 1484 1498
+)
+"spreadsheet.ml" 67 1590 1621 "spreadsheet.ml" 67 1590 1641
+type(
+  string list
+)
+"spreadsheet.ml" 67 1590 1600 "spreadsheet.ml" 67 1590 1641
+call(
+  stack
+)
+type(
+  unit
+)
+"spreadsheet.ml" 68 1642 1663 "spreadsheet.ml" 68 1642 1664
+type(
+  string
+)
+"spreadsheet.ml" 68 1642 1653 "spreadsheet.ml" 68 1642 1664
+type(
+  exn
+)
+"spreadsheet.ml" 69 1668 1680 "spreadsheet.ml" 69 1668 1683
+type(
+  string
+)
+ident(
+  def msg "spreadsheet.ml" 70 1788 1796 "spreadsheet.ml" 70 1788 1817
+)
+"spreadsheet.ml" 69 1668 1686 "spreadsheet.ml" 69 1668 1700
+type(
+  (string -> string, unit, string) format -> string -> string
+)
+ident(
+  ext_ref Format.sprintf
+)
+"spreadsheet.ml" 69 1668 1701 "spreadsheet.ml" 69 1668 1775
+type(
+  (string -> string, unit, string) format
+)
+"spreadsheet.ml" 69 1668 1776 "spreadsheet.ml" 69 1668 1784
+type(
+  string
+)
+ident(
+  int_ref filename "spreadsheet.ml" 61 1439 1454 "spreadsheet.ml" 61 1439 1462
+)
+"spreadsheet.ml" 69 1668 1686 "spreadsheet.ml" 69 1668 1784
+call(
+  stack
+)
+type(
+  string
+)
+"spreadsheet.ml" 70 1788 1796 "spreadsheet.ml" 70 1788 1801
+type(
+  exn -> unit
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"spreadsheet.ml" 70 1788 1813 "spreadsheet.ml" 70 1788 1816
+type(
+  string
+)
+ident(
+  int_ref msg "spreadsheet.ml" 69 1668 1680 "spreadsheet.ml" 69 1668 1683
+)
+"spreadsheet.ml" 70 1788 1802 "spreadsheet.ml" 70 1788 1817
+type(
+  exn
+)
+"spreadsheet.ml" 70 1788 1796 "spreadsheet.ml" 70 1788 1817
+type(
+  unit
+)
+"spreadsheet.ml" 69 1668 1676 "spreadsheet.ml" 70 1788 1817
+type(
+  unit
+)
+"spreadsheet.ml" 67 1590 1596 "spreadsheet.ml" 70 1788 1817
+type(
+  unit
+)
+"spreadsheet.ml" 62 1484 1490 "spreadsheet.ml" 70 1788 1817
+type(
+  unit
+)
+type(
+  unit
+)

@@ -1,0 +1,11 @@
+# OASIS_START
+# DO NOT EDIT (digest: 18b5164cca368e8351e6c89ec91ecb18)
+version = "0.1"
+description = "Functor for parsing and building spreadsheets"
+archive(byte) = "spreadsheet.cma"
+archive(byte, plugin) = "spreadsheet.cma"
+archive(native) = "spreadsheet.cmxa"
+archive(native, plugin) = "spreadsheet.cmxs"
+exists_if = "spreadsheet.cma"
+# OASIS_STOP
+

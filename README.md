@@ -10,9 +10,9 @@ Overview
 --------
 
 1. Create an instance of the `RowSpec` module.
-  - Define a type for spreadsheet rows.
-  - Write functions to parse a row from a string, and write a row to string.
-  - Give a string title describing the rows.
+  - Define a type for spreadsheet rows, give a string separator like `","`.
+  - Write functions to parse a row from a list of columns, and write a row to columns.
+  - Give a title---a list of strings describing each column in a row.
 2. Call `Spreadsheet.Make` with your `RowSpec`.
 3. Use the newly-created module to read a spreadsheet from a file, or
    make a new one and add rows to it.

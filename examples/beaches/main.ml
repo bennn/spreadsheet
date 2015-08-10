@@ -1,4 +1,4 @@
-(* open Spreadsheet *)
+open Spreadsheet
 
 module BeachSpec = struct
   type row = string * string * int * bool
@@ -18,7 +18,7 @@ module BeachSpec = struct
   let string_of_row (n,l,p,h) =
     String.concat "\t" [n; l; string_of_int p; string_of_bool h]
 
-  let title = "NAME	LOCALE	PRICE ($)	HAS BATHROOM"
+  let title = String.concat "\t" ["NAME"; "LOCALE"; "PRICE ($)"; "HAS BATHROOM"]
 end
 
 module BeachSheet = Spreadsheet.Make(BeachSpec)

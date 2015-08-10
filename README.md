@@ -4,6 +4,7 @@ spreadsheet
 Functor for working with spreadsheets.
 Generates spreadsheet functions from a spec for spreadsheet rows.
 
+See the `examples/` directory for sample code.
 
 Overview
 --------

@@ -7,7 +7,7 @@ module type SpecType = sig
   val row_of_string_list : string list -> row option
   val separator : string
   val string_list_of_row : row -> string list
-  val title : string
+  val titles : string list
 end
 
 module Make =
@@ -19,6 +19,12 @@ module Make =
     end)
 
     type t = RowSet.t
+
+    (* Cache this, to validate output of `string_list_of_row` on writes. *)
+    let num_columns = List.length Spec.titles
+
+    (* Necessary because `Str.split` needs a regexp argument *)
+    let sep_regexp = Str.regexp Spec.separator
 
     let add_row (sheet : t) ~row =
       if RowSet.mem row sheet then
@@ -32,9 +38,6 @@ module Make =
 
     let create () =
       RowSet.empty
-
-    (* Necessary because `Str.split` needs a regexp argument *)
-    let sep_regexp = Str.regexp Spec.separator
 
     (* Split the string using the separator, then call `row_of_string_list` *)
     let parse_row_exn str =
@@ -67,6 +70,13 @@ module Make =
       in
       RowSet.of_list lines
 
+    (* Concat a string list, but first check its length *)
+    let string_of_row_strings rs =
+      if ((List.length rs) = num_columns)
+      then String.concat Spec.separator rs
+      else let err_msg = Format.sprintf "Expected %d columns in row '%s'" num_columns (String.concat Spec.separator rs) in
+           raise (Invalid_spreadsheet err_msg)
+
     let write_lines fname lines =
       let out_chn = open_out fname in
       let () =
@@ -83,7 +93,8 @@ module Make =
           (fun r -> String.concat Spec.separator (Spec.string_list_of_row r))
           (RowSet.elements sheet)
       in
-      try write_lines filename (Spec.title :: rows)
+      let title_str = String.concat Spec.separator Spec.titles in
+      try write_lines filename (title_str :: rows)
       with Sys_error _ ->
         let msg = Format.sprintf "Could not write to file '%s'. Make sure the containing directory exists." filename in
         raise (Sys_error msg)

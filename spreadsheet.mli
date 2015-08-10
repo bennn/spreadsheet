@@ -28,9 +28,11 @@ module type SpecType =
     val string_list_of_row : row -> string list
     (* Write a row value to a list of columns. *)
 
-    val title : string
-    (* Spreadsheet title. May be any string.
-     * Will be printed as the first line of output spreadsheets. *)
+    val titles : string list
+    (* Spreadsheet title. Elements may be arbitrary strings,
+     *  but probably should not contain the `separator`.
+     * Will be printed as the first line of output spreadsheets.
+     * Length is used to validate output of `string_list_of_row`. *)
 
   end
 

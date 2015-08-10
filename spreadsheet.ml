@@ -4,7 +4,7 @@ module type SpecType = sig
   type row
 
   val compare_row : row -> row -> int
-  val row_of_string : string -> row
+  val row_of_string : string -> row option
   val string_of_row : row -> string
   val title : string
 end
@@ -14,7 +14,7 @@ module Make =
 
     module RowSet = Set.Make(struct
       type t = Spec.row
-      let compare        = Spec.compare_row
+      let compare = Spec.compare_row
     end)
 
     type t = RowSet.t
@@ -32,29 +32,43 @@ module Make =
     let create () =
       RowSet.empty
 
+    let parse_row_exn str =
+      begin match Spec.row_of_string str with
+      | Some r -> r
+      | None   -> let err_msg = Format.sprintf "failed to parse row '%s'" str in
+                  raise (Invalid_spreadsheet err_msg)
+      end
+
     let read_lines name : string list =
       let ic = open_in name in
       let try_read () =
         try Some (input_line ic) with End_of_file -> None in
       let rec loop acc =
-        match try_read () with
+        begin match try_read () with
         | Some s -> loop (s :: acc)
-        | None -> close_in ic; List.rev acc
+        | None  -> close_in ic; List.rev acc
+        end
       in
       loop []
 
-    let read (fname : string) : t =
-      let lines = (* skip the title *)
+    let read ?(skip_title=true) (fname : string) : t =
+      let strs  = read_lines fname in
+      let lines =
         List.map
-          Spec.row_of_string
-          (List.tl (read_lines fname))
+          parse_row_exn
+          (if skip_title
+           then List.tl strs
+           else strs)
       in
       RowSet.of_list lines
 
     let write_lines fname lines =
       let out_chn = open_out fname in
       let () =
-        List.iter (fun l -> output_string out_chn l; output_string out_chn "\n") lines in
+        List.iter
+          (fun l -> output_string out_chn l; output_string out_chn "\n")
+          lines
+      in
       let () = close_out out_chn in
       ()
 

@@ -5,9 +5,8 @@ module BeachSpec = struct
 
   let compare_row (n1,_,_,_) (n2,_,_,_) = Pervasives.compare n1 n2
 
-  let row_of_string str =
-    let vals = Str.split (Str.regexp "\t") str in
-    begin match vals with
+  let row_of_string_list strs =
+    begin match strs with
     | [name; loc; price; hasbr] ->
       begin try Some (name, loc, int_of_string price, bool_of_string hasbr) with
       | Failure _ -> None
@@ -15,10 +14,12 @@ module BeachSpec = struct
     | _ -> None
     end
 
-  let string_of_row (n,l,p,h) =
-    String.concat "\t" [n; l; string_of_int p; string_of_bool h]
+  let separator = "\t"
 
-  let title = String.concat "\t" ["NAME"; "LOCALE"; "PRICE ($)"; "HAS BATHROOM"]
+  let string_list_of_row (n,l,p,h) =
+    [n; l; string_of_int p; string_of_bool h]
+
+  let titles = ["NAME"; "LOCALE"; "PRICE ($)"; "HAS BATHROOM"]
 end
 
 module BeachSheet = Spreadsheet.Make(BeachSpec)

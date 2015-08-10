@@ -19,7 +19,6 @@ let full_phone_regexp = Str.regexp "^\\([0-9][0-9][0-9]\\)-\\([0-9][0-9][0-9]\\)
 let partial_phone_regexp = Str.regexp "^\\([0-9][0-9][0-9]\\)-\\([0-9][0-9][0-9][0-9]\\)$"
 
 let phone_number_of_string str =
-  let () = Format.printf "parsing phone '%s'\n" str in
   begin match Str.string_match full_phone_regexp str 0 with
   | true ->
     let n1 = int_of_string (Str.matched_group 1 str) in
@@ -45,8 +44,8 @@ module PersonSpec  = struct
 
   let compare_row (n1,_,_) (n2,_,_) = Pervasives.compare n1 n2
 
-  let row_of_string str =
-    begin match Str.split (Str.regexp ",") str with
+  let row_of_string_list strs =
+    begin match strs with
     | [name; number; addr] ->
       begin try Some (name, phone_number_of_string number, address_of_string addr) with
       | _ -> None
@@ -54,10 +53,12 @@ module PersonSpec  = struct
     | _ -> None
     end
 
-  let string_of_row (name, pn, addr) =
-    String.concat "," [name; string_of_phone_number pn; string_of_address addr]
+  let separator = ","
 
-  let title = "NAME,NUMBER,ADDRESS"
+  let string_list_of_row (name, pn, addr) =
+    [name; string_of_phone_number pn; string_of_address addr]
+
+  let titles = ["NAME";"NUMBER";"ADDRESS"]
 end
 
 module PhoneBook = Spreadsheet.Make(PersonSpec)

@@ -5,8 +5,8 @@ module PetSpec = struct
 
   let compare_row (id1,_) (id2,_) = Pervasives.compare id1 id2
 
-  let row_of_string str =
-    begin match Str.split (Str.regexp "\t") str with
+  let row_of_string_list strs =
+    begin match strs with
     | [id; names] ->
       begin try Some (int_of_string id, Str.split (Str.regexp ",") names) with
       | Failure _ -> None
@@ -14,10 +14,12 @@ module PetSpec = struct
     | _ -> None
     end
 
-  let string_of_row (id, names) =
-    string_of_int id ^ "\t" ^ (String.concat "," names)
+  let separator = "\t"
 
-  let title = "ID\tNAMES"
+  let string_list_of_row (id, names) =
+    [string_of_int id; (String.concat "," names)]
+
+  let titles = ["ID"; "NAMES"]
 end
 
 module PetSheet = Spreadsheet.Make(PetSpec)

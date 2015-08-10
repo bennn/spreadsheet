@@ -4,8 +4,9 @@ module type SpecType = sig
   type row
 
   val compare_row : row -> row -> int
-  val row_of_string : string -> row option
-  val string_of_row : row -> string
+  val row_of_string_list : string list -> row option
+  val separator : string
+  val string_list_of_row : row -> string list
   val title : string
 end
 
@@ -32,8 +33,12 @@ module Make =
     let create () =
       RowSet.empty
 
+    (* Necessary because `Str.split` needs a regexp argument *)
+    let sep_regexp = Str.regexp Spec.separator
+
+    (* Split the string using the separator, then call `row_of_string_list` *)
     let parse_row_exn str =
-      begin match Spec.row_of_string str with
+      begin match Spec.row_of_string_list (Str.split sep_regexp str) with
       | Some r -> r
       | None   -> let err_msg = Format.sprintf "failed to parse row '%s'" str in
                   raise (Invalid_spreadsheet err_msg)
@@ -75,7 +80,7 @@ module Make =
     let write ~filename (sheet : t) : unit =
       let rows =
         List.map
-          Spec.string_of_row
+          (fun r -> String.concat Spec.separator (Spec.string_list_of_row r))
           (RowSet.elements sheet)
       in
       try write_lines filename (Spec.title :: rows)

@@ -18,11 +18,15 @@ module type SpecType =
     val compare_row : row -> row -> int
     (* Function comparing two rows, used to define set operations. *)
 
-    val row_of_string : string -> row option
-    (* Parse a row value from a well-formed string. *)
+    val row_of_string_list : string list -> row option
+    (* Parse a row value from a list of columns.
+     * Return `None` if the columns are not well-formed. *)
 
-    val string_of_row : row -> string
-    (* Write a row value to string. *)
+    val separator : string
+    (* String pattern dividing columns. Most likely "," or "\t". *)
+
+    val string_list_of_row : row -> string list
+    (* Write a row value to a list of columns. *)
 
     val title : string
     (* Spreadsheet title. May be any string.

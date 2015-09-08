@@ -8,6 +8,7 @@ dev-repo: "http://github.com/bennn/spreadsheet.git"
 bug-reports: "http://github.com/bennn/spreadsheet/issues"
 doc: "Functor for parsing and building spreadsheets"
 license: "LGPL"
+available: [ocaml-version >= "4.02.0"]
 build: [
   ["ocaml" "setup.ml" "-configure"]
   [make "all"]

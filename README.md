@@ -30,3 +30,7 @@ Also see `spreadsheet.mli`
 - `write : filename:string -> t -> unit` write a spreadsheet to a file
 
 
+Note
+----
+
+Requires OCaml 4.02.0 for the [Set.of_list](http://caml.inria.fr/pub/docs/manual-ocaml/libref/Set.S.html) function.

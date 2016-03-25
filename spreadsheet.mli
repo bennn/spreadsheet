@@ -49,7 +49,7 @@ module Make :
       (* A spreadsheet, aka a set of rows *)
 
       val add_row : t -> row:RowSet.elt -> t
-      (* Aggresively add a new row to the spreadsheet,
+      (* Aggressively add a new row to the spreadsheet,
        * replacing an old equal row if one exists. *)
 
       val count_rows : t -> int
